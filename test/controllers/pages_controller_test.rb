@@ -2,30 +2,27 @@ require 'test_helper'
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
 
-  def setup
-  @base_title = "Polligot App"
-end
-
   test "should get root" do
-  get root_url
+  get root_path
   assert_response :success
+  assert_select "title", "Polligot App"
   end
 
   test "should get home" do
-    get pages_home_url
+  get root_path
     assert_response :success
-    assert_select "title"
+    assert_select "title", "Polligot App"
   end
 
   test "should get help" do
-    get pages_help_url
+    get help_path
     assert_response :success
-    assert_select "title"
+    assert_select "title", "Help | Polligot App"
   end
 
   test "should get about" do
-    get pages_about_url
+    get about_path
     assert_response :success
-    assert_select "title"
+    assert_select "title", "About | Polligot App"
   end
 end
