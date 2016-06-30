@@ -14,18 +14,18 @@ end
   test "should get home" do
     get pages_home_url
     assert_response :success
-    assert_select "title", "#{@base_title}"
+    assert_select "title"
   end
 
   test "should get help" do
     get pages_help_url
     assert_response :success
-    assert_select "title", "Help! | #{@base_title}"
+    assert_select "title"
   end
 
   test "should get about" do
     get pages_about_url
     assert_response :success
-    assert_select "title", "About | #{@base_title}"
+    assert_select "title"
   end
 end
