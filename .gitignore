@@ -15,4 +15,10 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore spring process id files for guard to work properly
 /spring/*.pid
+
+# Ignore project todo file
+.todo
+
