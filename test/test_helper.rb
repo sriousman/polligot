@@ -19,6 +19,8 @@ class ActiveSupport::TestCase
     session[:user_id]= user.id
   end
 
+  
+
   class ActionDispatch::IntegrationTest
     # Log in as particular user
     def log_in_as(user, password: 'password',remember_me: '1')
